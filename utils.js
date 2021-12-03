@@ -4,6 +4,11 @@ module.exports = {
   trimData: data => data.map(item => item.trim()),
   calcManhattandistance: (a, b) =>
     Math.abs(a[0]) - Math.abs(b[0]) + (Math.abs(a[1]) - Math.abs(b[1])),
+
+  transformMatrix: matrix => {
+    let [row] = matrix;
+    return row.map((value, column) => matrix.map(row => row[column]));
+  },
   modDataNewline: data => {
     const formatData = data.split("\n").map(item => parseInt(item.trim(), 10));
     return formatData;
