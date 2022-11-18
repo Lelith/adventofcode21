@@ -26,6 +26,10 @@ module.exports = {
     const formatData = data.split(",").map(item => parseInt(item.trim(), 10));
     return formatData;
   },
+  modStringIntoNumbers: data => {
+    const formatData = data.split("").map(item => parseInt(item.trim(), 10));
+    return formatData;
+  },
   readInput: path => {
     try {
       const data = fs.readFileSync(path, "utf8");
