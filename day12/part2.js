@@ -28,7 +28,7 @@ const getVisitedCaves = (visited, cave) => {
   if (!isSmall) {
     return visited;
   }
-  // a single cave in a path can be visited twice
+  // a single small cave in a path can be visited twice
   if (visited.includes(cave)) {
     return [...visited, "twice"];
   }
