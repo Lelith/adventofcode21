@@ -98,7 +98,7 @@ function createOrigami(initialPaper, instructions){
 
 function prettyPrint(paper){
   paper.forEach(row=>{
-    console.log(JSON.stringify(row));
+    console.log(row.join(""));
   })
 }
 
